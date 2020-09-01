@@ -1,7 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-const SignUp = () => <h1>SignUp</h1>
+import SignUp from './pages/SignUp'
+
 const Login = () => <h1>Login holi</h1>
 const Profile = () => <h1>Profile</h1>
 
