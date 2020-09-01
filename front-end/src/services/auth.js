@@ -18,7 +18,6 @@ const AUTH_SERVICE = {
   return await service.get('/profile', {
    headers: {
     'x-access-token': token,
-    //'Content-Type': 'application/json'
    }
   })
  },

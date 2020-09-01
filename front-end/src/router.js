@@ -8,7 +8,7 @@ import Profile from './pages/Profile'
 
 const AppRouter = () => (
  <Router>
-  <Route exact component={SignUp} path="/signup" />
+  <Route exact component={SignUp} path="/" />
   <Route exact component={LogIn} path="/login" />
   <Route exact component={Profile} path="/profile" />
  </Router>
