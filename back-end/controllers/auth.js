@@ -36,7 +36,3 @@ exports.profile = async (req, res) => {
  res.status(200).json({ user })
 }
 
-exports.logOut = (req, res) => {
- req.logout();
- res.status(201).json('User logged out')
-}

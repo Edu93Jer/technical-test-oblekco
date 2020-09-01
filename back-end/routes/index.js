@@ -11,6 +11,5 @@ router.get('/', (req, res, next) => {
 router.post('/signup', signUpPost);
 router.post('/login', logInPost)
 router.get('/profile', profile)
-router.get('/logout', logOut)
 
 module.exports = router;
