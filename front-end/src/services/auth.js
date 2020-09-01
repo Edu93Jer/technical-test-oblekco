@@ -14,9 +14,15 @@ const AUTH_SERVICE = {
   return await service.post('/login', userData)
  },
 
- PROFILE: async () => {
-  return await service.get('/profile')
+ PROFILE: async (token) => {
+  return await service.get('/profile', {
+   headers: {
+    'x-access-token': token,
+    //'Content-Type': 'application/json'
+   }
+  })
  },
+
 }
 
 export default AUTH_SERVICE;

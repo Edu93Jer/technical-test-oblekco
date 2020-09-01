@@ -3,8 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import SignUp from './pages/SignUp'
 import LogIn from './pages/LogIn'
-
-const Profile = () => <h1>Profile</h1>
+import Profile from './pages/Profile'
 
 
 const AppRouter = () => (
