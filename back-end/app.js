@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const express = require('express');
 const passport = require('passport');
-const favicon = require('serve-favicon');
+const cors = require('cors');
 const mongoose = require('mongoose');
 const logger = require('morgan');
 const path = require('path');
@@ -29,6 +29,12 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(
+  cors({
+    credentials: true,
+    origin: ["http://localhost:3001"],
+  })
+);
 
 // Express View engine setup
 
@@ -38,11 +44,6 @@ app.use(require('node-sass-middleware')({
   sourceMap: true
 }));
 
-
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'hbs');
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
 app.use(passport.initialize());
 app.use(passport.session());

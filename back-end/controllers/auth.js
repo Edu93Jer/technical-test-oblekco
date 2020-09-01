@@ -6,7 +6,7 @@ require('dotenv').config()
 exports.signUpPost = async (req, res) => {
  const { name, email, password, birthday, phone } = req.body
  const user = await User.register({ name, email, phone, birthday }, password)
- res.status(201).json({ message: "User created", user })
+ res.status(201).json({ message: "User created" })
 }
 
 exports.logInPost = (req, res, next) => {
